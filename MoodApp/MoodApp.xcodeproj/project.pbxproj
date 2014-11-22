@@ -27,6 +27,7 @@
 		6EC661841A20601C003E8F8C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6606E1A20601B003E8F8C /* FacebookSDK.framework */; };
 		C569CBDF1A209D5600E9357D /* GenericParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569CBDE1A209D5600E9357D /* GenericParse.swift */; };
 		C59557DF1A20871F0051CA06 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59557DE1A20871F0051CA06 /* FriendTableViewController.swift */; };
+		C5BF23211A214FFF002DC1AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF23201A214FFF002DC1AD /* Color.swift */; };
 		C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D881A202DA000CF25A0 /* AppDelegate.swift */; };
 		C70B2D8B1A202DA000CF25A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D8A1A202DA000CF25A0 /* ViewController.swift */; };
 		C70B2D8E1A202DA000CF25A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B2D8C1A202DA000CF25A0 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		6EC6606E1A20601B003E8F8C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		C569CBDE1A209D5600E9357D /* GenericParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericParse.swift; sourceTree = "<group>"; };
 		C59557DE1A20871F0051CA06 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
+		C5BF23201A214FFF002DC1AD /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C70B2D831A202DA000CF25A0 /* MoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B2D871A202DA000CF25A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C70B2D881A202DA000CF25A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				C70B2D881A202DA000CF25A0 /* AppDelegate.swift */,
 				C70B2D8A1A202DA000CF25A0 /* ViewController.swift */,
 				C569CBDE1A209D5600E9357D /* GenericParse.swift */,
+				C5BF23201A214FFF002DC1AD /* Color.swift */,
 				C70B2D8C1A202DA000CF25A0 /* Main.storyboard */,
 				C70B2D8F1A202DA000CF25A0 /* Images.xcassets */,
 				C70B2D911A202DA000CF25A0 /* LaunchScreen.xib */,
@@ -307,6 +310,7 @@
 				6EC6605F1A2049F6003E8F8C /* Conversation.swift in Sources */,
 				C59557DF1A20871F0051CA06 /* FriendTableViewController.swift in Sources */,
 				6EC660611A204D05003E8F8C /* Emotion.swift in Sources */,
+				C5BF23211A214FFF002DC1AD /* Color.swift in Sources */,
 				C70B2D8B1A202DA000CF25A0 /* ViewController.swift in Sources */,
 				C569CBDF1A209D5600E9357D /* GenericParse.swift in Sources */,
 				C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */,

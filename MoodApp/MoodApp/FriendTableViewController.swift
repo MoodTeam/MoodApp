@@ -43,11 +43,19 @@ class FriendTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var dataToDisplay: String = (self.errorData.count > 0) ? "Error" : "Friend"
+        
         //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.text = (self.errorData.count > 0) ? self.errorData[indexPath.row] : self.friendData[indexPath.row].name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
+        if self.errorData.count > 0 {
+            cell.textLabel.text = self.errorData[indexPath.row]
+            cell.backgroundColor = UIColor.whiteColor()
+        } else {
+            cell.textLabel.text = self.friendData[indexPath.row].name
+            cell.backgroundColor = Color.getFromName(Emotion.Grey)
+        }
         return cell
     }
     
