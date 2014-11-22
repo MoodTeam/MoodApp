@@ -27,9 +27,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
         println("User Name: \(user.name)")
         
-        //receive an array of friends
-        //save friends in parser
-        
+        //Call the loading view
         
         var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
         
@@ -42,17 +40,17 @@ class ViewController: UIViewController, FBLoginViewDelegate {
             for i in 0 ... data.count {
                 let valueDict : NSDictionary = data[i] as NSDictionary
                 
-//                
-//                var friend = Friend()
-//                friend.LastName = valueDict.objectForKey("name") as String
-//                friend.Id = valueDict.objectForKey("id") as String
-//                
-//                friends.append(friend)
+                var friend = Friend()
+                friend.name = valueDict.objectForKey("name") as String
+                friend.fId = valueDict.objectForKey("id") as String
+                
+                friends.append(friend)
             }
             
-            var friendsssss = resultdict.objectForKey("data") as NSArray
+            //Friends have the list of friends
+            //Call the TableFriendsViewList !!!
+            
         }
-        
     }
 
      func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
