@@ -15,30 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
         
-        
-        Parse.setApplicationId("6ssCGPzgjpW90tgqmCPu7fd3aEMIVxrTPbHEox8x",
-            clientKey: "ImEzIppBZSwqNX2LH6YOlb19uoqWkqEEY7JXOuHX")
+        Parse.setApplicationId("6ssCGPzgjpW90tgqmCPu7fd3aEMIVxrTPbHEox8x", clientKey: "ImEzIppBZSwqNX2LH6YOlb19uoqWkqEEY7JXOuHX")
         PFUser.enableAutomaticUser()
         
         FBLoginView.self
         FBProfilePictureView.self
         
-        
-//        var defaultACL = PFACL.
-//        // If you would like all objects to be private by default, remove this line.
-//        defaultACL.setPublicReadAccess(true)
-//        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
-        
         return true
-        
-        
     }
     
+    //After beeing login in Facebook
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?,
     annotation: AnyObject) -> Bool {
-        
+
         var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
         return wasHandled
     }

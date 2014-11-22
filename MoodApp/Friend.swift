@@ -13,4 +13,6 @@ class Friend{
     var FirstName: String = ""
     var LastName: String = ""
     var ImageUrl: String = ""
+    
+    	
 }
