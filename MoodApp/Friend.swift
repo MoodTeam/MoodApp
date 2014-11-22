@@ -14,5 +14,10 @@ class Friend{
     var LastName: String = ""
     var ImageUrl: String = ""
     
-    	
+    init(UserId: String, FirstName: String, LastName: String, ImageUrl: String) {
+        self.UserId = UserId
+        self.FirstName = FirstName
+        self.LastName = LastName
+        self.ImageUrl = ImageUrl
+    }
 }
