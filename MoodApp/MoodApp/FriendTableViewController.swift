@@ -11,6 +11,7 @@ import UIKit
 class FriendTableViewController: UITableViewController {
 
     var friendData: Array<Friend> = []
+    var errorData: Array<String> = ["Loading data..."]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class FriendTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        loadFriendFromParse()
+        GenericParse.loadFromParse("Friend", parseFriendObjects, parseFriendError)
         self.tableView.reloadData()
     }
 
@@ -38,57 +39,38 @@ class FriendTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.friendData.count
+        return (self.errorData.count > 0) ? self.errorData.count : self.friendData.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        
-        // Get the corresponding candy from our candies array
-        let FriendRow = self.friendData[indexPath.row]
-        
-        // Configure the cell
-        cell.textLabel.text = FriendRow.name
+        cell.textLabel.text = (self.errorData.count > 0) ? self.errorData[indexPath.row] : self.friendData[indexPath.row].name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
     }
     
-    func loadFriendFromParse() {
-        var query = PFQuery(className: "Friend")
-        query.findObjectsInBackgroundWithBlock{
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                // The find succeeded.
-                NSLog("Successfully retrieved \(objects.count) objects.")
-                // Do something with the found objects
-                for object in objects {
-                    var dataRow = object as PFObject
-                    var fId = dataRow.objectForKey("fId") as String
-                    var name = dataRow.objectForKey("name") as String
-                    var imageUrl = dataRow.objectForKey("imageUrl") as String
-
-                    self.friendData.append(Friend(fId: fId, name: name, imageUrl: imageUrl))
-                    NSLog("%@", name)
-                }
-                self.tableView.reloadData()
-            } else {
-                // Log details of the failure
-                NSLog("Error: %@ %@", error, error.userInfo!)
-            }
+    func parseFriendObjects(objects: [AnyObject]!) {
+        self.friendData = []
+        self.errorData = []
+        for object in objects {
+            var dataRow = object as PFObject
+            var fId = dataRow.objectForKey("fId") as String
+            var name = dataRow.objectForKey("name") as String
+            var imageUrl = dataRow.objectForKey("imageUrl") as String
+            
+            self.friendData.append(Friend(fId: fId, name: name, imageUrl: imageUrl))
         }
+        self.tableView.reloadData()
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
+    
+    func parseFriendError(error: NSError!) {
+        NSLog("Error detail: \(error)")
+        self.friendData = []
+        self.errorData = ["Data cannot be loaded"]
+        self.tableView.reloadData()
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Friend{
+class Friend {
     var fId: String = "" //facebookId => UniqueId
     var name: String = ""
     var imageUrl: String = ""
