@@ -15,8 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        
+        
+        Parse.setApplicationId("6ssCGPzgjpW90tgqmCPu7fd3aEMIVxrTPbHEox8x",
+            clientKey: "ImEzIppBZSwqNX2LH6YOlb19uoqWkqEEY7JXOuHX")
+        PFUser.enableAutomaticUser()
+        
+        var testObject = PFObject(className:"TestObject")
+        testObject["foo"] = "bar"
+        testObject.save()
+        
+        
+//        var defaultACL = PFACL.
+//        // If you would like all objects to be private by default, remove this line.
+//        defaultACL.setPublicReadAccess(true)
+//        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
+        
         return true
+        
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
