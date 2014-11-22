@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D881A202DA000CF25A0 /* AppDelegate.swift */; };
+		C70B2D8B1A202DA000CF25A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D8A1A202DA000CF25A0 /* ViewController.swift */; };
+		C70B2D8E1A202DA000CF25A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B2D8C1A202DA000CF25A0 /* Main.storyboard */; };
+		C70B2D901A202DA000CF25A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C70B2D8F1A202DA000CF25A0 /* Images.xcassets */; };
+		C70B2D931A202DA000CF25A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70B2D911A202DA000CF25A0 /* LaunchScreen.xib */; };
+		C70B2D9F1A202DA100CF25A0 /* MoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D9E1A202DA100CF25A0 /* MoodAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C70B2D991A202DA100CF25A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C70B2D7B1A202DA000CF25A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C70B2D821A202DA000CF25A0;
+			remoteInfo = MoodApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C70B2D831A202DA000CF25A0 /* MoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70B2D871A202DA000CF25A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C70B2D881A202DA000CF25A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C70B2D8A1A202DA000CF25A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C70B2D8D1A202DA000CF25A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C70B2D8F1A202DA000CF25A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C70B2D921A202DA000CF25A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C70B2D981A202DA100CF25A0 /* MoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70B2D9D1A202DA100CF25A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C70B2D9E1A202DA100CF25A0 /* MoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAppTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C70B2D801A202DA000CF25A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70B2D951A202DA100CF25A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C70B2D7A1A202DA000CF25A0 = {
+			isa = PBXGroup;
+			children = (
+				C70B2D851A202DA000CF25A0 /* MoodApp */,
+				C70B2D9B1A202DA100CF25A0 /* MoodAppTests */,
+				C70B2D841A202DA000CF25A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C70B2D841A202DA000CF25A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C70B2D831A202DA000CF25A0 /* MoodApp.app */,
+				C70B2D981A202DA100CF25A0 /* MoodAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C70B2D851A202DA000CF25A0 /* MoodApp */ = {
+			isa = PBXGroup;
+			children = (
+				C70B2D881A202DA000CF25A0 /* AppDelegate.swift */,
+				C70B2D8A1A202DA000CF25A0 /* ViewController.swift */,
+				C70B2D8C1A202DA000CF25A0 /* Main.storyboard */,
+				C70B2D8F1A202DA000CF25A0 /* Images.xcassets */,
+				C70B2D911A202DA000CF25A0 /* LaunchScreen.xib */,
+				C70B2D861A202DA000CF25A0 /* Supporting Files */,
+			);
+			path = MoodApp;
+			sourceTree = "<group>";
+		};
+		C70B2D861A202DA000CF25A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C70B2D871A202DA000CF25A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C70B2D9B1A202DA100CF25A0 /* MoodAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C70B2D9E1A202DA100CF25A0 /* MoodAppTests.swift */,
+				C70B2D9C1A202DA100CF25A0 /* Supporting Files */,
+			);
+			path = MoodAppTests;
+			sourceTree = "<group>";
+		};
+		C70B2D9C1A202DA100CF25A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C70B2D9D1A202DA100CF25A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C70B2D821A202DA000CF25A0 /* MoodApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C70B2DA21A202DA100CF25A0 /* Build configuration list for PBXNativeTarget "MoodApp" */;
+			buildPhases = (
+				C70B2D7F1A202DA000CF25A0 /* Sources */,
+				C70B2D801A202DA000CF25A0 /* Frameworks */,
+				C70B2D811A202DA000CF25A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoodApp;
+			productName = MoodApp;
+			productReference = C70B2D831A202DA000CF25A0 /* MoodApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C70B2D971A202DA100CF25A0 /* MoodAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C70B2DA51A202DA100CF25A0 /* Build configuration list for PBXNativeTarget "MoodAppTests" */;
+			buildPhases = (
+				C70B2D941A202DA100CF25A0 /* Sources */,
+				C70B2D951A202DA100CF25A0 /* Frameworks */,
+				C70B2D961A202DA100CF25A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C70B2D9A1A202DA100CF25A0 /* PBXTargetDependency */,
+			);
+			name = MoodAppTests;
+			productName = MoodAppTests;
+			productReference = C70B2D981A202DA100CF25A0 /* MoodAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C70B2D7B1A202DA000CF25A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = 42labs;
+				TargetAttributes = {
+					C70B2D821A202DA000CF25A0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					C70B2D971A202DA100CF25A0 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = C70B2D821A202DA000CF25A0;
+					};
+				};
+			};
+			buildConfigurationList = C70B2D7E1A202DA000CF25A0 /* Build configuration list for PBXProject "MoodApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C70B2D7A1A202DA000CF25A0;
+			productRefGroup = C70B2D841A202DA000CF25A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C70B2D821A202DA000CF25A0 /* MoodApp */,
+				C70B2D971A202DA100CF25A0 /* MoodAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C70B2D811A202DA000CF25A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70B2D8E1A202DA000CF25A0 /* Main.storyboard in Resources */,
+				C70B2D931A202DA000CF25A0 /* LaunchScreen.xib in Resources */,
+				C70B2D901A202DA000CF25A0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70B2D961A202DA100CF25A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C70B2D7F1A202DA000CF25A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70B2D8B1A202DA000CF25A0 /* ViewController.swift in Sources */,
+				C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70B2D941A202DA100CF25A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70B2D9F1A202DA100CF25A0 /* MoodAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C70B2D9A1A202DA100CF25A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C70B2D821A202DA000CF25A0 /* MoodApp */;
+			targetProxy = C70B2D991A202DA100CF25A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C70B2D8C1A202DA000CF25A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C70B2D8D1A202DA000CF25A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C70B2D911A202DA000CF25A0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C70B2D921A202DA000CF25A0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C70B2DA01A202DA100CF25A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C70B2DA11A202DA100CF25A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C70B2DA31A202DA100CF25A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MoodApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C70B2DA41A202DA100CF25A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MoodApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C70B2DA61A202DA100CF25A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MoodAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodApp.app/MoodApp";
+			};
+			name = Debug;
+		};
+		C70B2DA71A202DA100CF25A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MoodAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodApp.app/MoodApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C70B2D7E1A202DA000CF25A0 /* Build configuration list for PBXProject "MoodApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70B2DA01A202DA100CF25A0 /* Debug */,
+				C70B2DA11A202DA100CF25A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C70B2DA21A202DA100CF25A0 /* Build configuration list for PBXNativeTarget "MoodApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70B2DA31A202DA100CF25A0 /* Debug */,
+				C70B2DA41A202DA100CF25A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C70B2DA51A202DA100CF25A0 /* Build configuration list for PBXNativeTarget "MoodAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70B2DA61A202DA100CF25A0 /* Debug */,
+				C70B2DA71A202DA100CF25A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C70B2D7B1A202DA000CF25A0 /* Project object */;
+}
