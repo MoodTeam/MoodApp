@@ -49,7 +49,7 @@ class FriendTableViewController: UITableViewController {
         let FriendRow = self.friendData[indexPath.row]
         
         // Configure the cell
-        cell.textLabel.text = FriendRow.FirstName + " " + FriendRow.LastName
+        cell.textLabel.text = FriendRow.name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
@@ -65,13 +65,12 @@ class FriendTableViewController: UITableViewController {
                 // Do something with the found objects
                 for object in objects {
                     var dataRow = object as PFObject
-                    var userId = dataRow.objectForKey("UserId") as String
-                    var firstName = dataRow.objectForKey("FirstName") as String
-                    var lastName = dataRow.objectForKey("LastName") as String
-                    var imageUrl = dataRow.objectForKey("ImageUrl") as String
+                    var fId = dataRow.objectForKey("fId") as String
+                    var name = dataRow.objectForKey("name") as String
+                    var imageUrl = dataRow.objectForKey("imageUrl") as String
 
-                    self.friendData.append(Friend(UserId: userId, FirstName: firstName, LastName: lastName, ImageUrl: imageUrl))
-                    NSLog("%@", firstName + " " + lastName)
+                    self.friendData.append(Friend(fId: fId, name: name, imageUrl: imageUrl))
+                    NSLog("%@", name)
                 }
                 self.tableView.reloadData()
             } else {

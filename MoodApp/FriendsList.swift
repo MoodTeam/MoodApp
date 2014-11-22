@@ -9,6 +9,14 @@
 import Foundation
 
 class FriendsList {
-    var MyId: String = "";
-    var FriendId: String = "";
+    var myId: String = "";
+    var friendId: String = "";
+    
+    init(){
+    }
+    
+    init(myId: String, friendId: String) {
+        self.myId = myId
+        self.friendId = friendId
+    }
 }

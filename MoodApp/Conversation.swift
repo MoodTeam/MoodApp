@@ -10,9 +10,20 @@ import Foundation
 
 class Conversation {
     //Automatic generated uniqueId
-    var LastUpdated = NSDate()
-    var MyId: String = ""
-    var FriendId: String = ""
-    var MyEmotion: Emotion = Emotion.Grey
-    var HasBeenSeen: Bool = false
+    var lastUpdated = NSDate()
+    var myId: Int64 = 0
+    var friendId: Int64 = 0
+    var myEmotion: Emotion = Emotion.Grey
+    var hasBeenSeen: Bool = false
+    
+    init(){
+    }
+    
+    init(lastUpdated: NSDate, myId: Int64, friendId: Int64, myEmotion: Emotion, hasBeenSeen: Bool) {
+        self.lastUpdated = lastUpdated
+        self.myId = myId
+        self.friendId = friendId
+        self.myEmotion = myEmotion
+        self.hasBeenSeen = hasBeenSeen
+    }
 }

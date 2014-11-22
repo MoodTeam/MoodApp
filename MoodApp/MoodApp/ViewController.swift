@@ -31,6 +31,27 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         //save friends in parser
         
         
+        var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
+        
+        friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+            var resultdict = result as NSDictionary
+            println("Result Dict: \(resultdict)")
+            
+            var friends: [Friend] = [Friend]()
+            var data : NSArray = resultdict.objectForKey("data") as NSArray
+            for i in 0 ... data.count {
+                let valueDict : NSDictionary = data[i] as NSDictionary
+                
+//                
+//                var friend = Friend()
+//                friend.LastName = valueDict.objectForKey("name") as String
+//                friend.Id = valueDict.objectForKey("id") as String
+//                
+//                friends.append(friend)
+            }
+            
+            var friendsssss = resultdict.objectForKey("data") as NSArray
+        }
         
     }
 

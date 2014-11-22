@@ -9,15 +9,16 @@
 import Foundation
 
 class Friend{
-    var UserId: String = "" //facebookId => UniqueId
-    var FirstName: String = ""
-    var LastName: String = ""
-    var ImageUrl: String = ""
+    var fId: String = "" //facebookId => UniqueId
+    var name: String = ""
+    var imageUrl: String = ""
     
-    init(UserId: String, FirstName: String, LastName: String, ImageUrl: String) {
-        self.UserId = UserId
-        self.FirstName = FirstName
-        self.LastName = LastName
-        self.ImageUrl = ImageUrl
+    init(){
+    }
+    
+    init(fId: String, name: String, imageUrl: String) {
+        self.fId = fId
+        self.name = name
+        self.imageUrl = imageUrl
     }
 }
