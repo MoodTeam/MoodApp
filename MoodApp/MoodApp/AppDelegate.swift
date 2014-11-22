@@ -22,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: "ImEzIppBZSwqNX2LH6YOlb19uoqWkqEEY7JXOuHX")
         PFUser.enableAutomaticUser()
         
-        var testObject = PFObject(className:"TestObject")
-        testObject["foo"] = "bar"
-        testObject.save()
+        FBLoginView.self
+        FBProfilePictureView.self
         
         
 //        var defaultACL = PFACL.
@@ -35,6 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
         
         
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?,
+    annotation: AnyObject) -> Bool {
+        
+        var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+        return wasHandled
     }
 
     func applicationWillResignActive(application: UIApplication) {
