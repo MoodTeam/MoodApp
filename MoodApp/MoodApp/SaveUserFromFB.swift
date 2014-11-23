@@ -8,7 +8,7 @@
 
 //import Foundation
 
-class SaveUserInformation {
+class SaveUserFromFB {
     var userToSave: Friend = Friend()
     
     func saveMyProfile(fbUser: FBGraphUser){
@@ -25,15 +25,14 @@ class SaveUserInformation {
         var request : FBRequest = FBRequest.requestForMe()
         request.graphPath = "me/picture?redirect=false";
         request.HTTPMethod = "GET"
-        request.startWithCompletionHandler(fbAlbumRequestHandler);
-    }
-
-    private func fbAlbumRequestHandler(connection:FBRequestConnection!, result:AnyObject!, error:NSError!){
-        var resultdict = result as NSDictionary
-        var data = resultdict.objectForKey("data") as NSDictionary
-        userToSave.imageUrl = data.objectForKey("url") as String
-        
-        println("Saving user: " + userToSave.name + " picture url: " + userToSave.imageUrl)
-        GenericParse.addToParse("Friend", dict: userToSave.toDictionary())
+        request.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+            var resultdict = result as NSDictionary
+            var data = resultdict.objectForKey("data") as NSDictionary
+            self.userToSave.imageUrl = data.objectForKey("url") as String
+            
+            println("Saving user: " + self.userToSave.name + " picture url: " + self.userToSave.imageUrl)
+            GenericParse.addToParse("Friend", dict: self.userToSave.toDictionary())
+            
+        };
     }
 }

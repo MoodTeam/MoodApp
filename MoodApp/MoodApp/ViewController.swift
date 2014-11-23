@@ -33,54 +33,11 @@ class ViewController: UIViewController, FBLoginViewDelegate {
             return;
         }
         
-        //Call the loading view
+        var saveUserFromFB = SaveUserFromFB()
+        saveUserFromFB.saveMyProfile(user)
         
-        var saveUserInformation = SaveUserInformation()
-        saveUserInformation.saveMyProfile(user)
-        
-        //get friends list
-        
-        
-        //move to the othger view
-        
-        
-//            
-//            hasloginViewShowingLoggedInUserBeenCalled = true;
-//            
-//            println("User Name: \(user.name)")
-//            
-//            
-//            //Call the loading view
-//            
-//            
-//            
-//            var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
-//            friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
-//                var resultdict = result as NSDictionary
-//                println("Result Dict: \(resultdict)")
-//                
-//                var friends: [Friend] = [Friend]()
-//                var data : NSArray = resultdict.objectForKey("data") as NSArray
-//                for i in 0 ... data.count {
-//                    let valueDict : NSDictionary = data[i] as NSDictionary
-//                    
-//                    var friend = Friend()
-//                    friend.name = valueDict.objectForKey("name") as String
-//                    friend.fId = valueDict.objectForKey("id") as String
-//                    
-//                    friends.append(friend)
-//                }
-//                
-//                //Friends have the list of friends
-//                //Call the TableFriendsViewList !!!
-//                
-//            }
-//            
-//           
-//            var request : FBRequest = FBRequest.requestForMe()
-//            request.graphPath = "me/picture?redirect=false";
-//            request.HTTPMethod = "GET"
-//            request.startWithCompletionHandler(fbAlbumRequestHandler);
+        var saveFriendsFromFB = SaveFriendsFromFB()
+        saveFriendsFromFB.saveFriendsList()
         
     }
     
