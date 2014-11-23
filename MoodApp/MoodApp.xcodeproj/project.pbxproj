@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
 		6E179DC11A2083E600289CB0 /* SaveUserFromFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E179DC01A2083E600289CB0 /* SaveUserFromFB.swift */; };
 		6E71C1701A219252007E3EA8 /* SaveFriendsFromFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71C16F1A219252007E3EA8 /* SaveFriendsFromFB.swift */; };
 		6E71C1721A219EBA007E3EA8 /* AddFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71C1711A219EBA007E3EA8 /* AddFriendsTableViewController.swift */; };
-=======
-		18E3532C1A218D8E00478195 /* log-in-with-facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E3532B1A218D8E00478195 /* log-in-with-facebook.jpg */; };
-		6E179DC11A2083E600289CB0 /* FacebookApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E179DC01A2083E600289CB0 /* FacebookApiHelper.swift */; };
->>>>>>> Stashed changes
 		6EC660431A2039C6003E8F8C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660421A2039C6003E8F8C /* AudioToolbox.framework */; };
 		6EC660451A2039CC003E8F8C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660441A2039CC003E8F8C /* CFNetwork.framework */; };
 		6EC660471A2039D4003E8F8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660461A2039D4003E8F8C /* CoreGraphics.framework */; };
@@ -54,14 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< Updated upstream
 		6E179DC01A2083E600289CB0 /* SaveUserFromFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveUserFromFB.swift; sourceTree = "<group>"; };
 		6E71C16F1A219252007E3EA8 /* SaveFriendsFromFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveFriendsFromFB.swift; sourceTree = "<group>"; };
 		6E71C1711A219EBA007E3EA8 /* AddFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsTableViewController.swift; sourceTree = "<group>"; };
-=======
-		18E3532B1A218D8E00478195 /* log-in-with-facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "log-in-with-facebook.jpg"; sourceTree = "<group>"; };
-		6E179DC01A2083E600289CB0 /* FacebookApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookApiHelper.swift; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 		6EC660421A2039C6003E8F8C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6EC660441A2039CC003E8F8C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6EC660461A2039D4003E8F8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -209,7 +199,6 @@
 		C70B2D861A202DA000CF25A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18E3532B1A218D8E00478195 /* log-in-with-facebook.jpg */,
 				C70B2D871A202DA000CF25A0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -314,7 +303,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70B2D8E1A202DA000CF25A0 /* Main.storyboard in Resources */,
-				18E3532C1A218D8E00478195 /* log-in-with-facebook.jpg in Resources */,
 				C70B2D931A202DA000CF25A0 /* LaunchScreen.xib in Resources */,
 				C70B2D901A202DA000CF25A0 /* Images.xcassets in Resources */,
 			);
