@@ -13,6 +13,11 @@ struct GenericParse {
     // Sample usage: 
     // GenericParse.addToParse("NameInParse", dict: ["fId": "3", "name": "Hello World", "imageUrl": ""])
     static func addToParse(parseClassName: String, dict: Dictionary<String, AnyObject>) {
+        
+        //load from parse
+        //if exists
+        //return
+        
         var dataRow = PFObject(className: parseClassName)
         for keyValue in dict {
             dataRow.setObject(keyValue.1, forKey: keyValue.0)

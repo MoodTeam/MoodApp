@@ -112,6 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E71C16E1A21908D007E3EA8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C569CBDE1A209D5600E9357D /* GenericParse.swift */,
+				C5BF23201A214FFF002DC1AD /* Color.swift */,
+				6EC660561A203A9F003E8F8C /* MoodApp-Bridging-Header.h */,
+				6E179DC01A2083E600289CB0 /* SaveUserInformation.swift */,
+			);
+			name = Utils;
+			path = MoodApp;
+			sourceTree = "<group>";
+		};
 		6EC6603F1A203893003E8F8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 		C70B2D7A1A202DA000CF25A0 = {
 			isa = PBXGroup;
 			children = (
+				6E71C16E1A21908D007E3EA8 /* Utils */,
 				6EC6605B1A204863003E8F8C /* Schema */,
 				6EC6603F1A203893003E8F8C /* Frameworks */,
 				C70B2D851A202DA000CF25A0 /* MoodApp */,
@@ -169,14 +182,10 @@
 				C59557DE1A20871F0051CA06 /* FriendTableViewController.swift */,
 				C70B2D881A202DA000CF25A0 /* AppDelegate.swift */,
 				C70B2D8A1A202DA000CF25A0 /* ViewController.swift */,
-				C569CBDE1A209D5600E9357D /* GenericParse.swift */,
-				C5BF23201A214FFF002DC1AD /* Color.swift */,
 				C70B2D8C1A202DA000CF25A0 /* Main.storyboard */,
 				C70B2D8F1A202DA000CF25A0 /* Images.xcassets */,
 				C70B2D911A202DA000CF25A0 /* LaunchScreen.xib */,
 				C70B2D861A202DA000CF25A0 /* Supporting Files */,
-				6EC660561A203A9F003E8F8C /* MoodApp-Bridging-Header.h */,
-				6E179DC01A2083E600289CB0 /* SaveUserInformation.swift */,
 			);
 			path = MoodApp;
 			sourceTree = "<group>";

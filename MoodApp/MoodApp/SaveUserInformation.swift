@@ -33,7 +33,6 @@ class SaveUserInformation {
         var data = resultdict.objectForKey("data") as NSDictionary
         userToSave.imageUrl = data.objectForKey("url") as String
         
-        
         println("Saving user: " + userToSave.name + " picture url: " + userToSave.imageUrl)
         GenericParse.addToParse("Friend", dict: userToSave.toDictionary())
     }
