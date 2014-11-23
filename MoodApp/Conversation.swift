@@ -11,19 +11,27 @@ import Foundation
 class Conversation {
     //Automatic generated uniqueId
     var lastUpdated = NSDate()
-    var myId: Int64 = 0
-    var friendId: Int64 = 0
+    var myId: String = ""
+    var friendId: String = ""
     var myEmotion: Emotion = Emotion.Grey
     var hasBeenSeen: Bool = false
     
     init(){
     }
     
-    init(lastUpdated: NSDate, myId: Int64, friendId: Int64, myEmotion: Emotion, hasBeenSeen: Bool) {
+    init(lastUpdated: NSDate, myId: String, friendId: String, myEmotion: Emotion, hasBeenSeen: Bool) {
         self.lastUpdated = lastUpdated
         self.myId = myId
         self.friendId = friendId
         self.myEmotion = myEmotion
         self.hasBeenSeen = hasBeenSeen
+    }
+
+    func toDictionary()->Dictionary<String, AnyObject>{
+        var dictionary = Dictionary<String, AnyObject>()
+        dictionary["myId"] = myId
+        dictionary["friendId"] = friendId
+        dictionary["myEmotion"] = myEmotion.rawValue
+        return dictionary
     }
 }

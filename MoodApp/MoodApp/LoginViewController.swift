@@ -9,12 +9,12 @@
 import UIKit
 
 class LoginViewController: UIViewController, FBLoginViewDelegate {
-    
     @IBOutlet weak var fbLoginView: FBLoginView!
     var hasloginViewShowingLoggedInUserBeenCalled : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.	
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "read_friendlists"]
@@ -23,10 +23,13 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
      func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
          println("User Logged In")
          println("This is where you perform a segue.")
-        hasloginViewShowingLoggedInUserBeenCalled = true
+         hasloginViewShowingLoggedInUserBeenCalled = true
      }
 
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
+        let currentUser = PFUser.currentUser()
+        currentUser.email = user.name
+        currentUser.password = user.objectID
         
         if(hasloginViewShowingLoggedInUserBeenCalled == false) // delegate is fired twice
         {
@@ -37,8 +40,8 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         saveUserFromFB.saveMyProfile(user)
         
         var saveFriendsFromFB = SaveFriendsFromFB{() -> Void in
-            let secondViewController = AddFriendsTableViewController()
-            self.presentViewController(secondViewController, animated: true, completion: nil)
+                let secondViewController = AddFriendsTableViewController()
+                self.presentViewController(secondViewController, animated: true, completion: nil)
         }
         saveFriendsFromFB.saveFriendsList()
     }

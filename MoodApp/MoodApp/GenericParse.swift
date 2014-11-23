@@ -14,20 +14,34 @@ struct GenericParse {
     // GenericParse.addToParse("NameInParse", dict: ["fId": "3", "name": "Hello World", "imageUrl": ""])
     static func addToParse(parseClassName: String, dict: Dictionary<String, AnyObject>) {
         
-        //load from parse
-        //if exists
-        //return
-        
-        var dataRow = PFObject(className: parseClassName)
-        for keyValue in dict {
-            dataRow.setObject(keyValue.1, forKey: keyValue.0)
-        }
-        dataRow.saveInBackgroundWithBlock {
-            (success: Bool!, error: NSError!) -> Void in
-            if (success != nil && success!) {
-                NSLog("Object created in \(parseClassName) with id: \(dataRow.objectId)")
-            } else {
-                NSLog("%@", error)
+        var query = PFQuery(className: parseClassName)
+        query.findObjectsInBackgroundWithBlock{(objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            for object in objects {
+                if (parseClassName == "Friend")
+                {
+                    var dataRow = object as PFObject
+                    var fId = dataRow.objectForKey("fId") as String
+                    var fIdToSave = dict["fId"] as String
+                    if  (fId == fIdToSave)
+                    {
+                        return
+                    }
+                }
+            }
+            
+            
+            var dataRow = PFObject(className: parseClassName)
+            for keyValue in dict {
+                dataRow.setObject(keyValue.1, forKey: keyValue.0)
+            }
+            dataRow.saveInBackgroundWithBlock {
+                (success: Bool!, error: NSError!) -> Void in
+                if (success != nil && success!) {
+                    NSLog("Object created in \(parseClassName) with id: \(dataRow.objectId)")
+                } else {
+                    NSLog("%@", error)
+                }
             }
         }
     }
