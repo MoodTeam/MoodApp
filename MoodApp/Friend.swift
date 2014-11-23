@@ -16,9 +16,17 @@ class Friend {
     init(){
     }
     
-    init(fId: String, name: String, imageUrl: String) {
+    init(fId: String, name: String, imageUrl: String){
         self.fId = fId
         self.name = name
         self.imageUrl = imageUrl
+    }
+    
+    func toDictionary()->Dictionary<String, AnyObject>{
+        var dictionary = Dictionary<String, AnyObject>()
+        dictionary["fId"] = fId
+        dictionary["name"] = name
+        dictionary["imageUrl"] = imageUrl
+        return dictionary
     }
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E179DC11A2083E600289CB0 /* FacebookApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E179DC01A2083E600289CB0 /* FacebookApiHelper.swift */; };
+		6E179DC11A2083E600289CB0 /* SaveUserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E179DC01A2083E600289CB0 /* SaveUserInformation.swift */; };
 		6EC660431A2039C6003E8F8C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660421A2039C6003E8F8C /* AudioToolbox.framework */; };
 		6EC660451A2039CC003E8F8C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660441A2039CC003E8F8C /* CFNetwork.framework */; };
 		6EC660471A2039D4003E8F8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660461A2039D4003E8F8C /* CoreGraphics.framework */; };
@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E179DC01A2083E600289CB0 /* FacebookApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookApiHelper.swift; sourceTree = "<group>"; };
+		6E179DC01A2083E600289CB0 /* SaveUserInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveUserInformation.swift; sourceTree = "<group>"; };
 		6EC660421A2039C6003E8F8C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6EC660441A2039CC003E8F8C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6EC660461A2039D4003E8F8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,7 +176,7 @@
 				C70B2D911A202DA000CF25A0 /* LaunchScreen.xib */,
 				C70B2D861A202DA000CF25A0 /* Supporting Files */,
 				6EC660561A203A9F003E8F8C /* MoodApp-Bridging-Header.h */,
-				6E179DC01A2083E600289CB0 /* FacebookApiHelper.swift */,
+				6E179DC01A2083E600289CB0 /* SaveUserInformation.swift */,
 			);
 			path = MoodApp;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				C569CBDF1A209D5600E9357D /* GenericParse.swift in Sources */,
 				C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */,
 				6EC6605D1A204871003E8F8C /* Friend.swift in Sources */,
-				6E179DC11A2083E600289CB0 /* FacebookApiHelper.swift in Sources */,
+				6E179DC11A2083E600289CB0 /* SaveUserInformation.swift in Sources */,
 				6EC660631A205262003E8F8C /* FriendsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
