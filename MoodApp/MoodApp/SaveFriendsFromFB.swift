@@ -7,8 +7,13 @@
 //
 
 class SaveFriendsFromFB{
+    var callbackAfterSaving: () -> Void
     var listOfFriendsToSave: [Friend] = [Friend]()
 
+    init (callback: ()->Void){
+        self.callbackAfterSaving = callback
+    }
+    
     func saveFriendsList() -> Void {
 
         var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
@@ -46,6 +51,6 @@ class SaveFriendsFromFB{
                 GenericParse.addToParse("Friend", dict: self.listOfFriendsToSave[i].toDictionary())
             }
         }
-        
+        self.callbackAfterSaving()
     }
 }

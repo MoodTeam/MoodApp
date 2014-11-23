@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, FBLoginViewDelegate {
+class LoginViewController: UIViewController, FBLoginViewDelegate {
     
     @IBOutlet weak var fbLoginView: FBLoginView!
     var hasloginViewShowingLoggedInUserBeenCalled : Bool = false
@@ -36,9 +36,11 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         var saveUserFromFB = SaveUserFromFB()
         saveUserFromFB.saveMyProfile(user)
         
-        var saveFriendsFromFB = SaveFriendsFromFB()
+        var saveFriendsFromFB = SaveFriendsFromFB{() -> Void in
+            let secondViewController = AddFriendsTableViewController()
+            self.presentViewController(secondViewController, animated: true, completion: nil)
+        }
         saveFriendsFromFB.saveFriendsList()
-        
     }
     
     func fbAlbumRequestHandler(connection:FBRequestConnection!, result:AnyObject!, error:NSError!){
