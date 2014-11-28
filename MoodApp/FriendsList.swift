@@ -12,7 +12,7 @@ class FriendsList {
     var myId: String = "";
     var friendId: String = "";
     
-    init(){
+    init() {
     }
     
     init(myId: String, friendId: String) {

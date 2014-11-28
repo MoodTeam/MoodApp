@@ -6,23 +6,33 @@
 //  Copyright (c) 2014 42labs. All rights reserved.
 //
 
-class SaveFriendsFromFB{
-    var callbackAfterSaving: () -> Void
+class SaveFriendsFromFB {
+    var callbackAfterSaving: () -> ()
     var listOfFriendsToSave: [Friend] = [Friend]()
 
-    init (callback: ()->Void){
+    init (callback: () -> ()) {
         self.callbackAfterSaving = callback
     }
     
-    func saveFriendsList() -> Void {
-
-        var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
-        friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
-            var resultdict = result as NSDictionary
-
-            var data : NSArray = resultdict.objectForKey("data") as NSArray
-            for i in 0 ... (data.count - 1) {
-                let valueDict : NSDictionary = data[i] as NSDictionary
+    func saveFriendsList() -> () {
+        var friendsRequest: FBRequest = FBRequest.requestForMyFriends()
+        friendsRequest.startWithCompletionHandler{ (connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> () in
+            var result2: AnyObject! = result
+            if TestMode.currentMode == .Test {
+                var mockResult = [String: [[String: String]]]()
+                for friend in MockDefault.friends {
+                    if mockResult["data"] == nil {
+                        mockResult["data"] = [[String: String]]()
+                    }
+                    mockResult["data"]!.append(["name": friend.name, "id": friend.fId])
+                }
+                result2 = mockResult
+            }
+            
+            var resultdict = result2 as NSDictionary
+            var data = resultdict.objectForKey("data") as NSArray
+            for object in data {
+                let valueDict : NSDictionary = object as NSDictionary
 
                 var friend = Friend()
                 friend.name = valueDict.objectForKey("name") as String
@@ -36,19 +46,30 @@ class SaveFriendsFromFB{
         }
     }
     
-    private func getFriendsPictures()->Void {
-        for i in 0 ... self.listOfFriendsToSave.count - 1 {
+    private func getFriendsPictures() -> () {
+        for friend in self.listOfFriendsToSave {
             var request : FBRequest = FBRequest.requestForMe()
-            request.graphPath = self.listOfFriendsToSave[i].fId + "/picture?redirect=false";
+            request.graphPath = friend.fId + "/picture?redirect=false";
             request.HTTPMethod = "GET"
-            request.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
-                var resultdict = result as NSDictionary
+            request.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> () in
+                var result2: AnyObject! = result
+                if TestMode.currentMode == .Test {
+                    result2 = ["data": ["url": MockDefault.defaultUser.imageUrl]]
+                    for tempFriend in MockDefault.friends {
+                        if friend.fId == tempFriend.fId {
+                            friend.imageUrl = tempFriend.imageUrl
+                            break
+                        }
+                    }
+                }
+                
+                var resultdict = result2 as NSDictionary
                 var data = resultdict.objectForKey("data") as NSDictionary
-                self.listOfFriendsToSave[i].imageUrl = data.objectForKey("url") as String
+                friend.imageUrl = data.objectForKey("url") as String
                 
-                println("Saving user: " + self.listOfFriendsToSave[i].name + " with the image url: " + self.listOfFriendsToSave[i].imageUrl)
+                println("Saving user: " + friend.name + " with the image url: " + friend.imageUrl)
                 
-                GenericParse.addToParse("Friend", dict: self.listOfFriendsToSave[i].toDictionary())
+                GenericParse.sharedInstance.addToParse("Friend", dict: friend.toDictionary())
             }
         }
         self.callbackAfterSaving()

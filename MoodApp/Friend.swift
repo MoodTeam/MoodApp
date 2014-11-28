@@ -22,7 +22,7 @@ class Friend {
         self.imageUrl = imageUrl
     }
     
-    func toDictionary()->Dictionary<String, AnyObject>{
+    func toDictionary() -> Dictionary<String, AnyObject>{
         var dictionary = Dictionary<String, AnyObject>()
         dictionary["fId"] = fId
         dictionary["name"] = name

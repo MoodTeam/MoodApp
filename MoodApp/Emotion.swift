@@ -12,4 +12,5 @@ enum Emotion: Int  {
     case Grey = 0
     case Green = 1
     case Red = 2
+    case White = 3
 }

@@ -15,59 +15,53 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.	
+        // Do any additional setup after loading the view, typically from a nib.
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "read_friendlists"]
     }
 
-     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
-         println("User Logged In")
-         println("This is where you perform a segue.")
-         hasloginViewShowingLoggedInUserBeenCalled = true
-     }
+    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+        println("User Logged In")
+        println("This is where you perform a segue.")
+        hasloginViewShowingLoggedInUserBeenCalled = true
+    }
 
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
+        if !hasloginViewShowingLoggedInUserBeenCalled { // delegate is fired twice, but what for?
+            return
+        }
+        
         let currentUser = PFUser.currentUser()
         currentUser.email = user.name
         currentUser.password = user.objectID
         
-        if(hasloginViewShowingLoggedInUserBeenCalled == false) // delegate is fired twice
-        {
-            return;
-        }
-        
         var saveUserFromFB = SaveUserFromFB()
         saveUserFromFB.saveMyProfile(user)
         
-        var saveFriendsFromFB = SaveFriendsFromFB{() -> Void in
-                let secondViewController = AddFriendsTableViewController()
-                self.presentViewController(secondViewController, animated: true, completion: nil)
+        var saveFriendsFromFB = SaveFriendsFromFB { () -> () in
+            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ConversationVCID") as UIViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+            // Following line cannot be used as it does not associate with storyboard with the correct vc
+            // let secondViewController = ConversationViewController()
         }
         saveFriendsFromFB.saveFriendsList()
     }
     
-    func fbAlbumRequestHandler(connection:FBRequestConnection!, result:AnyObject!, error:NSError!){
-        var resultdict = result as NSDictionary
-        var data = resultdict.objectForKey("data") as NSDictionary
-        var imageUrl = data.objectForKey("url") as String
+    func fbAlbumRequestHandler(connection: FBRequestConnection!, result: AnyObject!, error: NSError!) {
     }
     
- 
+    func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
+        println("User Logged Out")
+    }
 
-     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
-     println("User Logged Out")
-     }
-
-     func loginView(loginView : FBLoginView!, handleError:NSError) {
-     println("Error: \(handleError.localizedDescription)")
-     }
+    func loginView(loginView : FBLoginView!, handleError:NSError) {
+        println("Error: \(handleError.localizedDescription)")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
 

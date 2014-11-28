@@ -27,9 +27,19 @@
 		6EC660661A205F42003E8F8C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660641A205F42003E8F8C /* Bolts.framework */; };
 		6EC660671A205F42003E8F8C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC660651A205F42003E8F8C /* Parse.framework */; };
 		6EC661841A20601C003E8F8C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6606E1A20601B003E8F8C /* FacebookSDK.framework */; };
-		C569CBDF1A209D5600E9357D /* GenericParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569CBDE1A209D5600E9357D /* GenericParse.swift */; };
-		C59557DF1A20871F0051CA06 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59557DE1A20871F0051CA06 /* FriendTableViewController.swift */; };
+		C507C7081A263F00002C7BBE /* TestPic1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C507C7071A263F00002C7BBE /* TestPic1.gif */; };
+		C50EB0851A24A35F008E4277 /* GenericParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50EB0841A24A35F008E4277 /* GenericParse.swift */; };
+		C534C62C1A26363B00B314FB /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534C62B1A26363B00B314FB /* TestMode.swift */; };
+		C569CBDF1A209D5600E9357D /* RealParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569CBDE1A209D5600E9357D /* RealParse.swift */; };
+		C59557DF1A20871F0051CA06 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59557DE1A20871F0051CA06 /* ConversationViewController.swift */; };
+		C5AFD42B1A24033A00A1EF25 /* IParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFD42A1A24033A00A1EF25 /* IParse.swift */; };
+		C5AFD42D1A24048800A1EF25 /* MockParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFD42C1A24048800A1EF25 /* MockParse.swift */; };
 		C5BF23211A214FFF002DC1AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF23201A214FFF002DC1AD /* Color.swift */; };
+		C5E1F1B51A27F45100B72F1C /* MockDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E1F1B41A27F45100B72F1C /* MockDefault.swift */; };
+		C5EC33B51A2642E9008905E7 /* TestPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = C5EC33B41A2642E9008905E7 /* TestPic2.png */; };
+		C5EC33B81A264386008905E7 /* TestPic3.png in Resources */ = {isa = PBXBuildFile; fileRef = C5EC33B61A264386008905E7 /* TestPic3.png */; };
+		C5EC33B91A264386008905E7 /* TestPic4.png in Resources */ = {isa = PBXBuildFile; fileRef = C5EC33B71A264386008905E7 /* TestPic4.png */; };
+		C5F0F6401A221A3C001E369D /* ConversationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F0F63F1A221A3C001E369D /* ConversationDetail.swift */; };
 		C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D881A202DA000CF25A0 /* AppDelegate.swift */; };
 		C70B2D8B1A202DA000CF25A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B2D8A1A202DA000CF25A0 /* LoginViewController.swift */; };
 		C70B2D8E1A202DA000CF25A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B2D8C1A202DA000CF25A0 /* Main.storyboard */; };
@@ -70,9 +80,19 @@
 		6EC660641A205F42003E8F8C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6EC660651A205F42003E8F8C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6EC6606E1A20601B003E8F8C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		C569CBDE1A209D5600E9357D /* GenericParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericParse.swift; sourceTree = "<group>"; };
-		C59557DE1A20871F0051CA06 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
+		C507C7071A263F00002C7BBE /* TestPic1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TestPic1.gif; sourceTree = "<group>"; };
+		C50EB0841A24A35F008E4277 /* GenericParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericParse.swift; path = MoodApp/GenericParse.swift; sourceTree = "<group>"; };
+		C534C62B1A26363B00B314FB /* TestMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
+		C569CBDE1A209D5600E9357D /* RealParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealParse.swift; path = MoodApp/RealParse.swift; sourceTree = "<group>"; };
+		C59557DE1A20871F0051CA06 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		C5AFD42A1A24033A00A1EF25 /* IParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IParse.swift; sourceTree = "<group>"; };
+		C5AFD42C1A24048800A1EF25 /* MockParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockParse.swift; path = MoodApp/MockParse.swift; sourceTree = "<group>"; };
 		C5BF23201A214FFF002DC1AD /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C5E1F1B41A27F45100B72F1C /* MockDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDefault.swift; sourceTree = "<group>"; };
+		C5EC33B41A2642E9008905E7 /* TestPic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestPic2.png; sourceTree = "<group>"; };
+		C5EC33B61A264386008905E7 /* TestPic3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestPic3.png; sourceTree = "<group>"; };
+		C5EC33B71A264386008905E7 /* TestPic4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestPic4.png; sourceTree = "<group>"; };
+		C5F0F63F1A221A3C001E369D /* ConversationDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationDetail.swift; path = MoodApp/ConversationDetail.swift; sourceTree = "<group>"; };
 		C70B2D831A202DA000CF25A0 /* MoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B2D871A202DA000CF25A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C70B2D881A202DA000CF25A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,11 +139,8 @@
 		6E71C16E1A21908D007E3EA8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C569CBDE1A209D5600E9357D /* GenericParse.swift */,
 				C5BF23201A214FFF002DC1AD /* Color.swift */,
 				6EC660561A203A9F003E8F8C /* MoodApp-Bridging-Header.h */,
-				6E179DC01A2083E600289CB0 /* SaveUserFromFB.swift */,
-				6E71C16F1A219252007E3EA8 /* SaveFriendsFromFB.swift */,
 			);
 			name = Utils;
 			path = MoodApp;
@@ -156,13 +173,40 @@
 				6EC6605E1A2049F6003E8F8C /* Conversation.swift */,
 				6EC660601A204D05003E8F8C /* Emotion.swift */,
 				6EC660621A205262003E8F8C /* FriendsList.swift */,
+				C5F0F63F1A221A3C001E369D /* ConversationDetail.swift */,
 			);
 			name = Schema;
+			sourceTree = "<group>";
+		};
+		C507C7091A263F06002C7BBE /* MockTesting */ = {
+			isa = PBXGroup;
+			children = (
+				C507C7071A263F00002C7BBE /* TestPic1.gif */,
+				C5EC33B41A2642E9008905E7 /* TestPic2.png */,
+				C5EC33B61A264386008905E7 /* TestPic3.png */,
+				C5EC33B71A264386008905E7 /* TestPic4.png */,
+				C534C62B1A26363B00B314FB /* TestMode.swift */,
+				C5E1F1B41A27F45100B72F1C /* MockDefault.swift */,
+			);
+			name = MockTesting;
+			sourceTree = "<group>";
+		};
+		C5AFD4291A2402F500A1EF25 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				C5AFD42A1A24033A00A1EF25 /* IParse.swift */,
+				C569CBDE1A209D5600E9357D /* RealParse.swift */,
+				C5AFD42C1A24048800A1EF25 /* MockParse.swift */,
+				C50EB0841A24A35F008E4277 /* GenericParse.swift */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 		C70B2D7A1A202DA000CF25A0 = {
 			isa = PBXGroup;
 			children = (
+				C507C7091A263F06002C7BBE /* MockTesting */,
+				C5AFD4291A2402F500A1EF25 /* Parse */,
 				6E71C16E1A21908D007E3EA8 /* Utils */,
 				6EC6605B1A204863003E8F8C /* Schema */,
 				6EC6603F1A203893003E8F8C /* Frameworks */,
@@ -186,7 +230,9 @@
 			children = (
 				C70B2D881A202DA000CF25A0 /* AppDelegate.swift */,
 				C70B2D8A1A202DA000CF25A0 /* LoginViewController.swift */,
-				C59557DE1A20871F0051CA06 /* FriendTableViewController.swift */,
+				6E179DC01A2083E600289CB0 /* SaveUserFromFB.swift */,
+				6E71C16F1A219252007E3EA8 /* SaveFriendsFromFB.swift */,
+				C59557DE1A20871F0051CA06 /* ConversationViewController.swift */,
 				6E71C1711A219EBA007E3EA8 /* AddFriendsTableViewController.swift */,
 				C70B2D8C1A202DA000CF25A0 /* Main.storyboard */,
 				C70B2D8F1A202DA000CF25A0 /* Images.xcassets */,
@@ -302,9 +348,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C507C7081A263F00002C7BBE /* TestPic1.gif in Resources */,
 				C70B2D8E1A202DA000CF25A0 /* Main.storyboard in Resources */,
 				C70B2D931A202DA000CF25A0 /* LaunchScreen.xib in Resources */,
+				C5EC33B51A2642E9008905E7 /* TestPic2.png in Resources */,
+				C5EC33B81A264386008905E7 /* TestPic3.png in Resources */,
 				C70B2D901A202DA000CF25A0 /* Images.xcassets in Resources */,
+				C5EC33B91A264386008905E7 /* TestPic4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,16 +374,22 @@
 			files = (
 				6E71C1701A219252007E3EA8 /* SaveFriendsFromFB.swift in Sources */,
 				6EC6605F1A2049F6003E8F8C /* Conversation.swift in Sources */,
-				C59557DF1A20871F0051CA06 /* FriendTableViewController.swift in Sources */,
+				C59557DF1A20871F0051CA06 /* ConversationViewController.swift in Sources */,
 				6EC660611A204D05003E8F8C /* Emotion.swift in Sources */,
 				6E71C1721A219EBA007E3EA8 /* AddFriendsTableViewController.swift in Sources */,
+				C50EB0851A24A35F008E4277 /* GenericParse.swift in Sources */,
 				C5BF23211A214FFF002DC1AD /* Color.swift in Sources */,
+				C534C62C1A26363B00B314FB /* TestMode.swift in Sources */,
+				C5AFD42D1A24048800A1EF25 /* MockParse.swift in Sources */,
 				C70B2D8B1A202DA000CF25A0 /* LoginViewController.swift in Sources */,
-				C569CBDF1A209D5600E9357D /* GenericParse.swift in Sources */,
+				C5F0F6401A221A3C001E369D /* ConversationDetail.swift in Sources */,
+				C569CBDF1A209D5600E9357D /* RealParse.swift in Sources */,
+				C5E1F1B51A27F45100B72F1C /* MockDefault.swift in Sources */,
 				C70B2D891A202DA000CF25A0 /* AppDelegate.swift in Sources */,
 				6EC6605D1A204871003E8F8C /* Friend.swift in Sources */,
 				6E179DC11A2083E600289CB0 /* SaveUserFromFB.swift in Sources */,
 				6EC660631A205262003E8F8C /* FriendsList.swift in Sources */,
+				C5AFD42B1A24033A00A1EF25 /* IParse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

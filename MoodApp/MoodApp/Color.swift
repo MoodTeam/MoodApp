@@ -37,6 +37,8 @@ struct Color {
             color = self.getFromRgb(0x00FF00)
         case .Red:
             color = self.getFromRgb(0xFF0000)
+        case .White:
+            color = self.getFromRgb(0xFFFFFF)
         }
         return color
     }

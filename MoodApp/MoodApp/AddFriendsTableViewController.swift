@@ -17,7 +17,7 @@ class AddFriendsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "CellLabel")
-        GenericParse.loadFromParse("Friend", parseFriendObjects, parseFriendError)
+        GenericParse.sharedInstance.loadFromParse("Friend", parseFriendObjects, parseFriendError)
         self.tableView.reloadData()
     }
     
@@ -50,9 +50,10 @@ class AddFriendsTableViewController: UITableViewController {
             cell.textLabel.text = self.errorData[indexPath.row]
             cell.backgroundColor = UIColor.whiteColor()
         } else {
-            cell.textLabel.text = self.friendData[indexPath.row].name
-            cell.backgroundColor = Color.getFromName(Emotion.Grey)
-            var image =  UIImage(data: NSData(contentsOfURL: NSURL(string:self.friendData[indexPath.row].imageUrl)!)!)
+            var friend = self.friendData[indexPath.row]
+            cell.textLabel.text = friend.name
+            cell.backgroundColor = Color.getFromName(Emotion.White)
+            var image = TestMode.currentMode == .Test ? UIImage(named: friend.imageUrl) : UIImage(data: NSData(contentsOfURL: NSURL(string: friend.imageUrl)!)!)
             cell.imageView.image = image
         }
         return cell
@@ -62,24 +63,24 @@ class AddFriendsTableViewController: UITableViewController {
         let currentUser = PFUser.currentUser()
         
         var clickedFriend = friendData[indexPath.row];
-        
-        var newConversation = Conversation()
-        newConversation.myId = currentUser.password
-        newConversation.friendId = clickedFriend.fId
-        newConversation.myEmotion = Emotion.Grey
-        
-        GenericParse.addToParse("Conversation", dict: newConversation.toDictionary())
-        
-        
-        
-        var newConversation2 = Conversation()
-        newConversation2.myId = currentUser.password
-        newConversation2.friendId = clickedFriend.fId
-        newConversation2.myEmotion = Emotion.Grey
-        
-        GenericParse.addToParse("Conversation", dict: newConversation2.toDictionary())
+//
+//        var newConversation = Conversation()
+//        newConversation.myId = currentUser.password
+//        newConversation.friendId = clickedFriend.fId
+//        newConversation.myEmotion = Emotion.Grey
+//        
+//        GenericParse.addToParse("Conversation", dict: newConversation.toDictionary())
+//        
+//        
+//        
+//        var newConversation2 = Conversation()
+//        newConversation2.myId = currentUser.password
+//        newConversation2.friendId = clickedFriend.fId
+//        newConversation2.myEmotion = Emotion.Grey
+//        
+//        GenericParse.addToParse("Conversation", dict: newConversation2.toDictionary())
 
-        let secondViewController = FriendTableViewController()
+        let secondViewController = ConversationViewController()
         self.presentViewController(secondViewController, animated: true, completion: nil)
     }
     
@@ -95,7 +96,7 @@ class AddFriendsTableViewController: UITableViewController {
             var imageUrl = dataRow.objectForKey("imageUrl") as String
             
             let currentUser = PFUser.currentUser()
-            if (name == currentUser.email ){
+            if (name == currentUser.email) {
                 continue
             }
             

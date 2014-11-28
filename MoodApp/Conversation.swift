@@ -14,24 +14,25 @@ class Conversation {
     var myId: String = ""
     var friendId: String = ""
     var myEmotion: Emotion = Emotion.Grey
-    var hasBeenSeen: Bool = false
+    var isSeen: Bool = false
     
-    init(){
+    init() {
     }
     
-    init(lastUpdated: NSDate, myId: String, friendId: String, myEmotion: Emotion, hasBeenSeen: Bool) {
+    init(lastUpdated: NSDate, myId: String, friendId: String, myEmotion: Emotion, isSeen: Bool) {
         self.lastUpdated = lastUpdated
         self.myId = myId
         self.friendId = friendId
         self.myEmotion = myEmotion
-        self.hasBeenSeen = hasBeenSeen
+        self.isSeen = isSeen
     }
 
-    func toDictionary()->Dictionary<String, AnyObject>{
+    func toDictionary() -> Dictionary<String, AnyObject>{
         var dictionary = Dictionary<String, AnyObject>()
         dictionary["myId"] = myId
         dictionary["friendId"] = friendId
-        dictionary["myEmotion"] = myEmotion.rawValue
+        dictionary["emotion"] = myEmotion.rawValue
+        dictionary["isSeen"] = true
         return dictionary
     }
 }
