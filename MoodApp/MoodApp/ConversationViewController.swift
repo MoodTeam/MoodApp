@@ -26,7 +26,8 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.userId = TestMode.currentMode ==  .Test ? MockDefault.defaultUser.fId : PFUser.currentUser().password
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        // This line tells tableView to create its own ConversationTableViewCell instead of fetching from storyboard
+        //self.tableView.registerClass(ConversationTableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.loadFriend()
@@ -62,13 +63,15 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var dataToDisplay: String = (self.errorData.count > 0) ? "Error" : "Table"
         
-        //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as ConversationTableViewCell
+        cell.accessoryType = UITableViewCellAccessoryType.None
         
         if dataToDisplay == "Error" {
-            cell.textLabel.text = self.errorData[indexPath.row]
+            cell.friendName.text = self.errorData[indexPath.row]
+            cell.friendLastUpdate.text = ""
             cell.backgroundColor = UIColor.whiteColor()
+            cell.myEmotion.backgroundColor = cell.backgroundColor
+            cell.borderLine.backgroundColor = cell.backgroundColor
         } else {
             var myConversations = self.conversationDetail.fetch(userId)
             if myConversations != nil {
@@ -77,14 +80,17 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
                 for keyValuePair in myConversations! {
                     if counter == targetIndex {
                         var friend = self.friendDict[keyValuePair.0]
-                        cell.textLabel.text = (friend == nil) ? "John Doe" : friend!.name
+                        cell.friendName.text = (friend == nil) ? "John Doe" : friend!.name
+                        
+                        cell.friendLastUpdate.text = "Last Updated at 0 minute ago"
                         
                         var conversationDict = keyValuePair.1
                         cell.backgroundColor = Color.getFromName(conversationDict[keyValuePair.0]!.myEmotion)
                         
                         var image = TestMode.currentMode == .Test ? UIImage(named: friend!.imageUrl) : UIImage(data: NSData(contentsOfURL: NSURL(string: friend!.imageUrl)!)!)
-                        cell.imageView.image = image
-                        
+                        cell.friendImage.image = image
+                        cell.myEmotion.backgroundColor = Color.getFromName(conversationDict[userId]!.myEmotion)
+                        cell.borderLine.backgroundColor = UIColor.blackColor()
                         break;
                     }
                     counter++

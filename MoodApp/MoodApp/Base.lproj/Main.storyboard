@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9Qj-wu-O7t"/>
-                        <viewControllerLayoutGuide type="bottom" id="3S5-nA-T4B"/>
+                        <viewControllerLayoutGuide type="top" id="Zsb-Z1-IyW"/>
+                        <viewControllerLayoutGuide type="bottom" id="aEr-sM-Pn0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ynE-pT-9Fa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -36,8 +36,8 @@
             <objects>
                 <viewController storyboardIdentifier="ConversationVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TCH-it-SBm" customClass="ConversationViewController" customModule="MoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0oq-K4-Hfs"/>
-                        <viewControllerLayoutGuide type="bottom" id="UpH-k5-K7X"/>
+                        <viewControllerLayoutGuide type="top" id="bgw-kz-idC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uco-dm-S1T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sIU-4e-pYX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -53,24 +53,54 @@
                                     <action selector="onButtonDown:" destination="TCH-it-SBm" eventType="touchDown" id="LgJ-CG-fRO"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ConversationTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pC5-Kk-QHO">
-                                <rect key="frame" x="0.0" y="58" width="320" height="456"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ConversationTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pC5-Kk-QHO">
+                                <rect key="frame" x="0.0" y="56" width="320" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="LcD-Fh-stT">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="ConversationTVCID" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="58" id="LcD-Fh-stT" customClass="ConversationTableViewCell" customModule="MoodApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LcD-Fh-stT" id="paz-e3-Vzg">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh8-jC-ugo">
-                                                    <rect key="frame" x="50" y="11" width="42" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-Us-rtP">
+                                                    <rect key="frame" x="8" y="0.0" width="55" height="58"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njc-vh-4l0">
+                                                    <rect key="frame" x="71" y="0.0" width="187" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fal-eX-dTS">
+                                                    <rect key="frame" x="71" y="18" width="187" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-EW-qdo">
+                                                    <rect key="frame" x="274" y="0.0" width="46" height="58"/>
+                                                    <color key="backgroundColor" red="0.85430112089999999" green="0.85430112089999999" blue="0.85430112089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-nl-uOe">
+                                                    <rect key="frame" x="274" y="-1" width="2" height="59"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="borderLine" destination="aVU-nl-uOe" id="eFe-w9-q9Z"/>
+                                            <outlet property="friendImage" destination="Zj6-Us-rtP" id="sHX-CD-hnp"/>
+                                            <outlet property="friendLastUpdate" destination="fal-eX-dTS" id="AzJ-VD-HL2"/>
+                                            <outlet property="friendName" destination="Njc-vh-4l0" id="MWK-2B-DGx"/>
+                                            <outlet property="myEmotion" destination="ccf-EW-qdo" id="RIY-sK-Wg2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -88,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7GH-7Y-ORr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="752"/>
+            <point key="canvasLocation" x="-57" y="767"/>
         </scene>
         <!--Add Friends Table View Controller-->
         <scene sceneID="cdm-1x-8tg">
@@ -121,8 +151,8 @@
             <objects>
                 <viewController id="mW5-JJ-gLg" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PSp-Yk-1a1"/>
-                        <viewControllerLayoutGuide type="bottom" id="QOU-Pk-KE8"/>
+                        <viewControllerLayoutGuide type="top" id="jv5-uZ-fa7"/>
+                        <viewControllerLayoutGuide type="bottom" id="3M2-03-d3I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t0P-xK-R7S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

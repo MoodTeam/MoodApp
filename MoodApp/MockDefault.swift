@@ -17,7 +17,7 @@ struct MockDefault {
     
     static var conversations = [
         Conversation(lastUpdated: NSDate(), myId: "1", friendId: "2", myEmotion: Emotion.Green, isSeen: true),
-        Conversation(lastUpdated: NSDate(), myId: "2", friendId: "1", myEmotion: Emotion.Green, isSeen: true),
+        Conversation(lastUpdated: NSDate(), myId: "2", friendId: "1", myEmotion: Emotion.Red, isSeen: true),
         Conversation(lastUpdated: NSDate(), myId: "1", friendId: "3", myEmotion: Emotion.Red, isSeen: true),
-        Conversation(lastUpdated: NSDate(), myId: "3", friendId: "1", myEmotion: Emotion.Red, isSeen: true)]
+        Conversation(lastUpdated: NSDate(), myId: "3", friendId: "1", myEmotion: Emotion.Green, isSeen: true)]
 }
